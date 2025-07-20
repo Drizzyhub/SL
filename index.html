@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STREETLUX Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>STREETLUX</h1>
+    <button onclick="toggleTheme()">Toggle Theme</button>
+  </header>
+
+  <div class="products">
+    <div class="product" onclick="showModal('Premium STREETLUX Hoodie', 'Available - ₦15,000')">
+      <h3>STREETLUX Hoodie</h3>
+      <p>Click to view</p>
+    </div>
+    <div class="product" onclick="showModal('STREETLUX Sneakers', 'Out of Stock')">
+      <h3>STREETLUX Sneakers</h3>
+      <p>Click to view</p>
+    </div>
+  </div>
+
+  <div id="modal" class="modal" onclick="hideModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <span class="close" onclick="hideModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
